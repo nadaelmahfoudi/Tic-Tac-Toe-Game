@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* create color variables */
+:root {
+    --blue: #2dcedc;
+    --plan: #35494b;
+}
+
+body {
+    font-size: 10px;
+    color: var(--blue);
+    font-family: 'Nerko One', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.container {
+    padding: 100px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #16282b;
+}
+
+/* #gameTable {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.case {
+    height: 20px;  
+    width: 20px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-right: 2px solid var(--blue);  
+    border-bottom: 2px solid var(--blue); 
+}
+
+
+.case:nth-child(20n + 1) { 
+    border-left: 2px solid var(--blue);
+}
+.case:nth-child(-n + 20) { 
+    border-top: 2px solid var(--blue);
+} */
+
+#gameTable {
+    width: 400px;  
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);  
+    /* gap: 2px; */
+    margin-top: 40px;
+}
+
+.case {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+    background-color: #16282b;
+}
+
+.case:hover {
+    background-color: #443e66;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: #000000;
+    border-color: var(--blue);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 500;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translate(-2px);
+}
+
+#turnText{
+    padding-top: 20px;
+    font-size: 22px;
+}
